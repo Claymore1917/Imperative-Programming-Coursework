@@ -1,5 +1,4 @@
 import java.util.Scanner;  
-
 Scanner scanner = new Scanner(System.in);  
 
 int vanillaPrice = 39; 
@@ -22,24 +21,20 @@ if (flavour != 'v' && flavour != 'c' && flavour != 's') {
     } else if (scoops > 3) {  
         System.out.println("That's too many scoops to fit in a cone.");  
     } else {  
-               
- int pricePerScoop = -1;  
-        
-        switch (flavour) {  
-            case 'v':  
-                pricePerScoop = vanillaPrice;  
-                break;  
-            case 'c':  
-                pricePerScoop = chocolatePrice;  
-                break;  
-            case 's':  
-                pricePerScoop = strawberryPrice;  
-                break;  
+int pricePerScoop = -1;  
+switch (flavour) {  
+    case 'v':  
+        pricePerScoop = vanillaPrice;  
+        break;  
+    case 'c':  
+        pricePerScoop = chocolatePrice;  
+        break;  
+    case 's':  
+        pricePerScoop = strawberryPrice;  
+        break;  
         }  
 
         int totalPrice = conePrice + (pricePerScoop * scoops);  
-
-       
-        System.out.printf("That will be £%d.%02d please.%n", totalPrice / 100, totalPrice % 100);  
+        System.out.printf("That will be %d.%02d please.%n", totalPrice / 100, totalPrice % 100);  
     }  
 }  
